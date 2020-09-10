@@ -19,6 +19,7 @@
     );
     -webkit-background-clip: text;
     color: transparent;
+    text-shadow: 0.1rem 0.1rem 0.5rem rgba($color-grey-dark, 0.9);
   }
 
   &:hover {
