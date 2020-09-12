@@ -1,3 +1,22 @@
+/* ---------------------------------------
+
+// ~ MEDIA QUERIES ~ //
+
+0 - 600px:		Phone
+600 - 900px:	Tablet Portrait
+900 - 1200px:	Tablet Landscape
+1200 - 1800px:	Desktop
+1800px & up:	XL desktop screens
+
+------------------------------------------
+
+$breakpoint argument choices:
+-phone
+-tabPort
+-tabLand
+-xlDesktop
+
+--------------------------------------- */
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -35,6 +54,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box; }
@@ -477,6 +505,9 @@ body {
   .popup:target {
     opacity: 1;
     visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
   .popup__close:link, .popup__close:visited {
     color: #777;
     position: absolute;
@@ -499,7 +530,10 @@ body {
     background-color: #fff;
     box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2);
     display: table;
-    overflow: hidden; }
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all 0.3s 0.2s; }
   .popup__left {
     width: 33.333333%;
     display: table-cell; }
