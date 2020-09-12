@@ -10,10 +10,6 @@ html {
 	// This defines what 1rem is
 	font-size: 62.5%;
 
-	@include responsive(xlDesktop) {
-		font-size: 75%;
-	}
-
 	@include responsive(tabPort) {
 		font-size: 56.25%;
 	}
@@ -21,8 +17,17 @@ html {
 	@include responsive(tabPort) {
 		font-size: 50%;
 	}
+
+	@include responsive(xlDesktop) {
+		font-size: 75%;
+	}
 }
 
 body {
 	box-sizing: border-box;
+	padding: 3rem;
+
+	@include responsive(tabPort) {
+		padding: 0;
+	}
 }
