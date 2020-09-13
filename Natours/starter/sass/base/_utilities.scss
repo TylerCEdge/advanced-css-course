@@ -4,6 +4,10 @@
 
 .u-margin-bottom-lg {
 	margin-bottom: 8rem !important;
+
+	@include responsive(tabPort) {
+		margin-bottom: 5rem !important;
+	}
 }
 
 .u-margin-bottom-sm {
@@ -12,6 +16,10 @@
 
 .u-margin-bottom-md {
 	margin-bottom: 4rem !important;
+
+	@include responsive(tabPort) {
+		margin-bottom: 3rem !important;
+	}
 }
 
 .u-margin-top-lg {
