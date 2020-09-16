@@ -1,15 +1,58 @@
 // COLOR VARIABLES
 $color-primary: #c69963;
-$color-primary-dark: #B28451;
+$color-primary-dark: #b28451;
 
 $color-secondary: #101d2c;
 
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
 
-$color-grey-dark-1: #54483A;
-$color-grey-dark-2: #6D5D4B;
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
 
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
+
+.container {
+	background-color: lightblue;
+	width: 1000px;
+	margin: 30px auto;
+
+	display: grid;
+	grid-template-rows: repeat(2, 150px);
+	grid-template-columns: repeat(2, 150px) 1fr; // 1 fr will occupy all remaining available space.
+
+	grid-gap: 30px;
+}
+
+.item {
+	padding: 20px;
+	font-size: 30px;
+	font-family: sans-serif;
+	color: white;
+
+	&--1 {
+		background-color: orangered;
+	}
+
+	&--2 {
+		background-color: yellowgreen;
+	}
+
+	&--3 {
+		background-color: blueviolet;
+	}
+
+	&--4 {
+		background-color: palevioletred;
+	}
+
+	&--5 {
+		background-color: royalblue;
+	}
+
+	&--6 {
+		background-color: goldenrod;
+	}
+}
