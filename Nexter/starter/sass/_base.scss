@@ -14,66 +14,39 @@ $color-grey-dark-2: #6d5d4b;
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
-body {
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
 	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $font-primary;
+	color: $color-grey-dark-2;
+	font-weight: 300;
+	line-height: 1.6;
 }
 
 .container {
-	background-color: lightblue;
-	width: 90vw;
-	margin: 30px auto;
-
-	height: 300px;
-
-	// 1 fr will occupy all remaining available space.
 	display: grid;
-	grid-template-rows: repeat(2, 1fr);
-	grid-template-columns: repeat(3, 1fr);
 
-	gap: 30px;
-}
+	grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+	grid-template-columns:
+		[sidebar-start] 8rem [sidebar-end full-start] minmax(
+			6rem,
+			1fr
+		) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+		[center-end] minmax(6rem, 1fr) [full-end];
 
-.item {
-	padding: 20px;
-	font-size: 30px;
-	font-family: sans-serif;
-	color: white;
-
-	&--1 {
-		background-color: orangered;
-		/*
-		grid-row-start: 2;
-		grid-row-end: 3;
-		grid-column-start: 2;
-        grid-column-end: 3;
-        */
-		grid-row: 2;
-		grid-column: 2;
-	}
-
-	&--2 {
-		background-color: yellowgreen;
-	}
-
-	&--3 {
-		background-color: blueviolet;
-		grid-area: 2 / 1;
-	}
-
-	&--4 {
-		background-color: palevioletred;
-	}
-
-	&--5 {
-		background-color: royalblue;
-		/*
-		grid-row: 2;
-        grid-column: 3;
-        */
-		grid-area: 2 / 3;
-	}
-
-	&--6 {
-		background-color: goldenrod;
+	& > * {
+		padding: 10px;
+		font-size: 1rem;
 	}
 }
