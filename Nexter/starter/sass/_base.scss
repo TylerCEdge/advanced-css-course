@@ -14,16 +14,23 @@ $color-grey-dark-2: #6d5d4b;
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
+body {
+	box-sizing: border-box;
+}
+
 .container {
 	background-color: lightblue;
-	width: 1000px;
+	width: 90vw;
 	margin: 30px auto;
 
-	display: grid;
-	grid-template-rows: repeat(2, 150px);
-	grid-template-columns: repeat(2, 150px) 1fr; // 1 fr will occupy all remaining available space.
+	height: 300px;
 
-	grid-gap: 30px;
+	// 1 fr will occupy all remaining available space.
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
+
+	gap: 30px;
 }
 
 .item {
@@ -34,6 +41,14 @@ $font-display: 'Josefin Sans', sans-serif;
 
 	&--1 {
 		background-color: orangered;
+		/*
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 2;
+        grid-column-end: 3;
+        */
+		grid-row: 2;
+		grid-column: 2;
 	}
 
 	&--2 {
@@ -42,6 +57,7 @@ $font-display: 'Josefin Sans', sans-serif;
 
 	&--3 {
 		background-color: blueviolet;
+		grid-area: 2 / 1;
 	}
 
 	&--4 {
@@ -50,6 +66,11 @@ $font-display: 'Josefin Sans', sans-serif;
 
 	&--5 {
 		background-color: royalblue;
+		/*
+		grid-row: 2;
+        grid-column: 3;
+        */
+		grid-area: 2 / 3;
 	}
 
 	&--6 {
