@@ -4,8 +4,9 @@
 		grid-column: full-start / col-end 4;
 
 		background-image: linear-gradient(
-				rgba($color-primary, 0.5),
-				rgba($color-primary, 0.5)
+				to top right,
+				rgba($color-primary, 0.1),
+				rgba($color-primary, 0.3)
 			),
 			url(../img/back.jpg);
 		background-blend-mode: multiply;
