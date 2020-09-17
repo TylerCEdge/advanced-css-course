@@ -5,7 +5,34 @@
 	}
 
 	&__content {
+		/*
+		*** CSS GRID SOLUTION
+
+		display: grid;
+		align-content: center;
+		justify-items: start;
+
+		*** SAME EFFECT AS THE 4 BELOW FLEXBOX PROPERTIES
+		*/
+
+		display: flex;
+		flex-direction: column;
+
+		justify-content: center;
+		align-items: flex-start;
+
 		background-color: $color-grey-light-1;
 		grid-column: col-start 5 / full-end;
+
+		/*
+		VW/VH allows for the padding to be more adaptive
+		*/
+		padding: 6rem 8vw;
+	}
+
+	&__text {
+		font-size: 1.5rem;
+		font-style: italic;
+		margin-bottom: 4rem;
 	}
 }
